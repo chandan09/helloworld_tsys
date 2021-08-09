@@ -39,7 +39,7 @@ pipeline{
         stage('Deploy War'){
             steps{
               
-              ansiblePlaybook credentialsId: 'dev-server', disableHostKeyChecking: true, installation: 'ansible', inventory: 'host.inv', playbook: 'deploy-docker.yml'
+              ansiblePlaybook credentialsId: 'dev-server', disableHostKeyChecking: true, installation: 'Ansible', inventory: '/opt/ansible/inventory/aws_ec2.yaml', playbook: 'deploy-docker.yml'
             }
         }
     }
